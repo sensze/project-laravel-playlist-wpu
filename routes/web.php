@@ -12,7 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route home
 Route::get('/', function () {
-    return 'Halaman Home';
+    return view('home');
+});
+//Route about
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Ifku Syoba",
+        "email" => "ifkusyobaa@gmail.com",
+        "image" => "profile_picture.jpg"
+    ]);
+});
+//Route Blog
+Route::get('/posts', function () {
+    return view('posts');
 });
